@@ -1,11 +1,11 @@
-class FoodItem:
+class FoodItemMP:
     def __init__(self, foodName, amount):
         self.foodName = foodName
         self.amount = amount
         self.standardPrice = 0.0
         self.calculatedPrice = 0.0
 
-    def priceList(self):
+    def priceListMP(self):
         foodPrices = {
             "Dry Cured Iberian Ham": 177.80,
             "Wagyu Steaks": 450.00,
@@ -18,7 +18,7 @@ class FoodItem:
         }
         self.standardPrice = foodPrices.get(self.foodName, 0.0)
 
-    def calculateCost(self):
+    def calculateCostMP(self):
         self.calculatedPrice = self.standardPrice * self.amount
         return self.calculatedPrice
 
